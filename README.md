@@ -16,6 +16,8 @@
  
 
  More Information on the project version can be found on the About page of the website.
+ You can see heroku version of the project at the following link:
+ https://capstone-heroku-light.herokuapp.com/about.html
  
  Requirements are in requirements.txt
 
