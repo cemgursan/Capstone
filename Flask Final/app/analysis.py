@@ -30,7 +30,6 @@ import base64
 
 style.use("ggplot")
 
-auth_tok="F7nwoPZVQZ3s_fTsypBy"
 
 quandl.ApiConfig.api_key = "YOUR API KEY HERE"
 
