@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+
+<head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> 
+</head>
+<main>{% block main %} {% endblock%}</main>
+ <body>
+   
+    
+    <header>
+              
+        <div class="navbar" style="position:relative; z-index:10">
+          
+            <a href="{{ url_for('stockprices') }}">Stock Prices</a>
+            <a href="{{ url_for('plots') }}">Seaborn Plots </a>
+            <a href="{{ url_for('montecarlo') }}">Monte Carlo Simulation</a>
+            <a href="{{ url_for('machinelearning') }}">Machine Learning - Regression </a>
+            <a href="{{ url_for('logout') }}">Sign out</a>
+
+        </div>
+        {% block menu %}
+        {% endblock %} 
+    </header>
+    
+    <script> src="{{url_for('static', filename='js/app.js')}}"</script>
+    
+    
+    
+ </body>
+</html>
+

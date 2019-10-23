@@ -1,0 +1,83 @@
+{% extends "template_signin.html" %}
+{% block menu %}
+<html>
+  <head>
+    <title>Monte Carlo</title>
+
+  </head>
+<body>
+
+
+
+        <HR>
+            <h1> Monte Carlo Simulation</h1>
+            <p> &nbsp;&nbsp;Monte Carlo simulations are a broad class of computational algorithms that rely on repeated random sampling to obtain numerical results.<br>&nbsp;
+                The underlying concept is to use randomness to solve problems that might be deterministic in principle. The main idea behind this method is that the results are computed based on repeated random sampling and statistical analysis. <br>&nbsp;
+                At every Monte Carlo run, the stock price moves randomly according to its previous mean and standard deviation. This gives a deterministic range for where the stock price can be in the future.<br>&nbsp;
+                Different colored lines represent different possibilities where the stock  price can reach.<br>&nbsp;
+
+                <br>&nbsp;&nbsp;Please choose a Stock to simulate in the drop-down box below.<br>&nbsp;
+                Please write the amount of simulation days in the second textbox that you would like the simulation to continue<br>&nbsp;
+                Please write the amount of simulation runs in the third textbox that you would like to experiment with.<br>&nbsp;
+                Please write the confidence interval for the Histogram Distribution for various analysis in the third textbox <br>&nbsp;
+                
+            
+            </p>
+            <p><strong>
+                &nbsp For more information on Monte Carlo Simulations please visit  
+                <a href="https://en.wikipedia.org/wiki/Monte_Carlo_method#Monte_Carlo_and_random_numbers"> Wikipedia Page. </a> 
+    
+              </strong>
+            </p>
+            <p>&nbsp;Choose a Stock</p>
+            <form method="POST">
+                &nbsp;<select name = "dropdown" >
+                <option value = "Google" selected>Google</option>
+                <option value = "Apple">Apple</option>
+                <option value = "Coca Cola">Coca Cola </option>
+              </select><br>
+              &nbsp;<input name="days" value="Simulation days: 365"> <br>
+              &nbsp;<input name="runs" value="Simulation runs: 1000"><br>
+              &nbsp;<input name="confidence" value="Confidence Interval: %5"><br>
+              
+
+              &nbsp;<input type="submit" value="Submit">
+          </form>
+          <P> &nbsp;You have selected Monte Carlo Simulation for {{ stockname }} Stock. </P>
+          <P> &nbsp;Simulation will be run {{ simruns }} times for {{ simdays }} days. </P>
+          <P> &nbsp;Confidence interval for the Monte Carlo Simulation Distribution in the below image is %{{ conf }}. </P>
+            <div>{{ the_div1|safe }}  </div> <br><br>
+
+            <h1> Histogram Distribution of Monte Carlo Experiment</h1>
+            <p> &nbsp;&nbsp;Although Monte Carlo runs, can reach to a wide range, the distribution for all future stock price is not the same<br>&nbsp;
+              By using the histogram below, we are showing how different prices are more likely to happen. 
+          </p>
+          <p><strong>
+              &nbsp For more information on Statistical Distribution please visit  
+              <a href="https://towardsdatascience.com/statistical-distributions-24b5b4ba43cc"> this data science page. </a> 
+  
+            </strong>
+          </p>
+          <br><br>
+          <p><strong>
+              &nbsp Final price distribution for {{ stockname }} Stock after {{ simdays }} days Using Monte Carlo  {{ simruns }} runs within % {{ conf }} confidence
+          </strong><br>
+            <div>
+                        
+              <img src="data:image/png;base64,{{ MonteDist|safe  }}" width="800"> <br><br>
+                
+            </div>
+          </p>
+
+
+        <HR>
+            <script src="https://cdn.pydata.org/bokeh/release/bokeh-1.3.4.min.js"></script>
+            <script src="https://cdn.pydata.org/bokeh/release/bokeh-widgets-1.3.4.min.js"></script>
+            <script src="https://cdn.pydata.org/bokeh/release/bokeh-tables-1.3.4.min.js"></script>
+            {{ the_script1|safe }} 
+
+
+
+</BODY>
+{% endblock menu %}
+</HTML>

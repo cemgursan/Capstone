@@ -1,0 +1,87 @@
+{% extends "template_signin.html" %}
+{% block menu %}
+
+<HTML>
+        <head>
+
+                <title>Seaborn Plots</title>
+            
+              </head>
+<body>
+
+
+
+        <HR>
+            <h1> Seaborn Joint Plot for Two Stock Prices</h1>
+            <p>
+                &nbsp;&nbsp;Joint Plot from Seaborn consists of two different plots. First is the Scatter plot. <br>&nbsp;
+                Scatter plot shows us how two stock prices were at a specific point in time. In a scatter plot like this, it is possible to investigate how these two different stocks are related. <br>&nbsp;
+                If there is a significant correlation between two stocks, it is possible to make a prediction for one price from evaluating the other.<br><br>&nbsp;
+                Second plot in the Seaborn's Joint Plot is the Histogram plot which can be seen across the stockname.<br>&nbsp;
+                Histogram plot presents the different frequencies for different price ranges for these two stocks.<br><br>&nbsp;
+
+                In Jointplots, not only can you see the relationships between the two variables, but also how they are distributed individually.<br><br>&nbsp;
+                Choose two stocks that you would like to see and then press submit!
+
+            </p>
+
+            <br>
+
+            
+
+            <br>
+
+        <p>&nbsp;Choose First Stock</p>
+        <form method="POST">
+                &nbsp;<select name = "dropdown_first" >
+                <option value = "Google" selected>Google</option>
+                <option value = "Apple">Apple</option>
+                <option value = "Coca Cola">Coca Cola </option>
+            </select>
+        <p>&nbsp;Choose Second Stock</p>
+        &nbsp;<select name = "dropdown_second" >
+                <option value = "Google" selected>Google</option>
+                <option value = "Apple">Apple</option>
+                <option value = "Coca Cola">Coca Cola </option>
+            </select><br>
+            &nbsp;<input type="submit" value="Submit">
+        </form>
+        <P> &nbsp; You have selected {{ stock1}} and {{ stock2 }} </P>
+        
+
+                <div>
+                        
+                        <img src="data:image/png;base64,{{ jointplot|safe  }}" width="700"> <br><br>
+                </div>
+
+            <HR>
+                <h1> Seaborn Pair Plot for Three Stock Prices</h1>
+
+                <p>
+                        &nbsp;&nbsp;Pair Plot from Seaborn also consists of two different plots: Scatter plot and Histogram <br>&nbsp;
+                        This time, Scatter plot was utilized on the return percentages for different stocks. Every different two stocks create a scatter plot. <br>&nbsp;
+                        By analyzing the clustering of different return percentage data point, we can understand which stock price fare better than the other. <br><br>&nbsp;
+                        
+                        Second plot in the Seaborn's Pair Plog is again a Histogram plot <br>&nbsp;
+                        Histogram plot can be found on the pair plot when the stock name is the same. Histogram plot shows the frequency of different return percentages for one stock.<br><br>&nbsp;
+        
+                        When these data and graphs are present, we can use linear regression analysis to check whether these stocks fit to a line.<br>&nbsp;<br>&nbsp;
+        
+                </p>
+            
+            <div>
+                        
+                    
+                <img src="data:image/png;base64,{{ pairplot|safe  }}" width="700"> <br><br>
+            </div>
+            
+
+        <HR>
+            
+        <img style="max-width: 500px;"src="/static/images/flask.jpg"> 
+
+
+
+</BODY>
+{% endblock menu %}
+</HTML>

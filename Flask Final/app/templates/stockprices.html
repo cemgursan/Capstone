@@ -1,0 +1,50 @@
+{% extends "template_signin.html" %}
+{% block menu %}
+<html>
+  <head>
+
+    <title>Stock Prices</title>
+
+  </head>
+  <body> 
+
+        <h1> &nbspStock Prices with Moving Averages</h1>
+        <p>&nbsp The moving average (MA) is a simple technical analysis tool that smooths out price data by creating a constantly updated average price. <br>&nbsp 
+          The average is taken over a specific period of time the trader chooses. This project uses 10, 20, and 30 days for moving average analysis at this  version. <br><br>&nbsp 
+          A moving average helps cut down the amount of "noise" on a price chart. Look at the direction of the moving average to get a basic idea of which way the price is moving.  <br>&nbsp 
+          If it is angled up, the price is moving up (or was recently) overall; angled down, and the price is moving down overall; moving sideways, and the price is likely in a range. <br>&nbsp 
+          <br>&nbsp 
+          Choose a stock that you would like to see and then press submit!
+          
+        </p>
+        <br>
+        <p><strong>
+            &nbsp For more information on how to use Moving Averages to evaluate stock prices please visit  
+            <a href="https://www.investopedia.com/articles/active-trading/052014/how-use-moving-average-buy-stocks.asp"> Cory Mitchell's Investopedia Page. </a> 
+
+          </strong>
+        </p>
+        <br>
+        <p><strong>&nbsp&nbspChoose a Stock</strong></p>
+        <form method="POST">
+            &nbsp&nbsp<select name = "dropdown" >
+             <option value = "Google" selected>Google</option>
+             <option value = "Apple">Apple</option>
+             <option value = "Coca Cola">Coca Cola </option>
+          </select>
+          <input type="submit" value="Submit">
+       </form>
+       <P> &nbsp&nbspYou have selected {{ stock_name }} </P>
+       
+
+        <div >{{ the_div1|safe }}  </div>
+        
+        <img style="max-width: 500px;"src="/static/images/flask.jpg"> 
+    <script src="https://cdn.pydata.org/bokeh/release/bokeh-1.3.4.min.js"></script>
+    <script src="https://cdn.pydata.org/bokeh/release/bokeh-widgets-1.3.4.min.js"></script>
+    <script src="https://cdn.pydata.org/bokeh/release/bokeh-tables-1.3.4.min.js"></script>
+    {{ the_script1|safe }}
+  </body>
+
+  {% endblock menu %}
+</html>

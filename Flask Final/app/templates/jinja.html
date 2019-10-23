@@ -1,0 +1,53 @@
+{% extends "template.html" %}
+{% block menu %}
+<HTML>
+    <head>
+
+        <title>Jinja Examples</title>
+                
+    </head>
+
+
+
+    <body>
+        <h1> Jinja Tutorials</h1>
+        <h2> &nbsp;&nbsp;Variables </h2>
+        <hr>
+        <H3> <B><I>&nbsp&nbsp {{ value }} </I></B></H3>
+        <br>
+
+        <h2>&nbsp; For Loop in HTML</h2>
+        <hr>
+        <ul>
+            {% for l in lang %}
+            &nbsp;&nbsp; {{ loop.index }} : {{ l }} <br>
+            {% endfor %}
+        </ul>
+        <br>
+        <h2>&nbsp; Flashed Messages </h2>
+        <hr>
+        
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <h3>&nbsp;&nbsp;&nbsp;{{ message }}</h3>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <br>
+
+        <h2>&nbsp; Passing Functions from Python to Jinja </h2>
+        <hr>
+        <ul>
+                &nbsp;&nbsp;&nbsp;{{ Jfunc(" : Hello! I am a Python Function.") }}
+        </ul>
+
+        <script>
+            alert('Hello, I am a Javascript Alertbox!');
+        </script>
+       
+        
+
+    </body>
+    {% endblock menu %}
+</HTML>

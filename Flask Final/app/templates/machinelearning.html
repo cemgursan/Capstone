@@ -1,0 +1,61 @@
+{% extends "template_signin.html" %}
+{% block menu %}
+
+<HTML>
+        <head>
+                <title>Linear Regression</title>
+            
+              </head>
+<body>
+
+
+
+        <HR>
+            <h1> MACHINE LEARNING</h1>
+            <p> &nbsp;&nbsp;Supervised learning is the machine learning task of learning a function that maps an input to an output based on example input-output pairs.<br>&nbsp;
+                 It infers a function from labeled training data consisting of a set of training examples. In supervised learning, each example is a pair consisting of an input object (typically a vector) and a desired output value (also called the supervisory signal).  <br>&nbsp;
+                 A supervised learning algorithm analyzes the training data and produces an inferred function, which can be used for mapping new examples.<br>&nbsp;
+                 <br>&nbsp;
+                
+                In statistics, linear regression is a linear approach to modeling the relationship between a scalar response (or dependent variable) and one or more explanatory variables (or independent variables).<br>&nbsp;
+                In linear regression, the relationships are modeled using linear predictor functions whose unknown model parameters are estimated from the data. <br><br>&nbsp;
+
+                In this machine learning example, we use a linear regression model for different stocks and try to forecast the stock price.<br>
+            </p>
+            <p><strong>
+                    &nbsp Click for more information on <a href="https://en.wikipedia.org/wiki/Machine_learning"> Machine  Learning</a>, 
+                    <a href="https://en.wikipedia.org/wiki/Supervised_learning"> Supervised Learning</a>, and
+                    <a href="https://en.wikipedia.org/wiki/Linear_regression"> Linear Regression Models </a>
+                       </strong>
+                </p>
+                <br>
+            <p>&nbsp;&nbsp;Choose a Stock</p>
+            <form method="POST">
+              &nbsp;&nbsp;<select name = "dropdown" >
+                <option value = "Google" selected>Google</option>
+                <option value = "Apple">Apple</option>
+                <option value = "Coca Cola">Coca Cola </option>
+              </select>
+              &nbsp;<input type="submit" value="Submit">
+            </form>
+          <P> &nbsp;&nbsp;You have selected {{ stockname }} </P>
+            <div >{{ the_div1|safe }}  </div>
+            
+
+            <img style="max-width: 500px;"src="/static/images/flask.jpg"> 
+
+        <HR>
+            <script src="https://cdn.pydata.org/bokeh/release/bokeh-1.3.4.min.js"></script>
+            <script src="https://cdn.pydata.org/bokeh/release/bokeh-widgets-1.3.4.min.js"></script>
+            <script src="https://cdn.pydata.org/bokeh/release/bokeh-tables-1.3.4.min.js"></script>
+            {{ the_script1|safe }} 
+
+            
+
+        
+
+
+
+</BODY>
+{% endblock menu %}
+</HTML>

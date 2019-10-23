@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+        <head>
+
+                <title>Sign in</title>
+                        
+            </head>
+
+<link rel="stylesheet" href="{{ url_for('static',     filename='css/style.css') }}"> 
+<body bgcolor="3498db">
+<bodysign >
+{% extends "template.html" %}
+{% block menu %}
+<BR>
+    <BR>
+<form method="post" action="signin.html">
+<div class="box">
+<h1>Sign in to your account</h1>
+
+<input type="email" name="email" value="email" onFocus="field_focus(this, 'email');" onblur="field_blur(this, 'email');" class="email" />
+  
+<input type="password" name="password" value="password" onFocus="field_focus(this, 'password');" onblur="field_blur(this, 'password');" class="password" />
+  
+
+
+<button type="sub" class="btn-primary2" style="height:37px;"> Sign In </button>
+
+
+<a href={{ url_for('signup') }}><div id="btn2">Sign Up</div></a> <!-- End Btn2 -->
+
+
+  
+</div> <!-- End Box -->
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <h3>{{ message }}</h3>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+</form>
+
+</bodysign>
+</body>
+  
+
+{% endblock %}
+</HTML>

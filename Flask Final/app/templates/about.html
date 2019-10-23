@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>About this Project</title>
+    
+    <script> src="{{url_for('static', filename='javascript/app.js')}}"</script>
+  </head>
+  <body>
+
+{% extends "template.html" %}
+{% block menu %}
+  
+    <h1> About this Project </h1>
+    <p>
+        &nbsp&nbsp * Flask : To empower web applications with python  <br>&nbsp&nbsp
+        * API : To get free WIKI stock data from <a href="https://www.quandl.com">Quandl</a> <br>&nbsp&nbsp
+        * Pandas & Numpy : To perform data operations on downloaded data from API <br>&nbsp&nbsp
+        * Matplotlib & Seaborn : To visualize outcomes of data operations <br>&nbsp&nbsp
+        * Bokeh :  To create interactive data visualizations for the web page <br>&nbsp&nbsp
+        * SQLite Database : To sign-up and log-in to authenticated sections of the website <br>&nbsp&nbsp
+        * Password Hashing: To encrypt passed data from users in the database for security <br>&nbsp&nbsp
+        * HTML, CSS & Javascripts : To visualize powerful web pages <br>&nbsp&nbsp
+        * Jinja : To connect HTML with python <br>&nbsp&nbsp
+        
+    </p>
+    <h1> Library requirements</h1>
+    <p>
+        &nbsp&nbsp Numpy  <br>&nbsp&nbsp
+        Pandas<br>&nbsp&nbsp
+        Bokeh<br>&nbsp&nbsp
+        Flask<br>&nbsp&nbsp
+        OS<br>&nbsp&nbsp
+        SQLite<br>&nbsp&nbsp
+        Passlib.hash<br>&nbsp&nbsp
+        Quandl<br>&nbsp&nbsp
+        Time<br>&nbsp&nbsp
+        Math<br>&nbsp&nbsp
+        Datetime<br>&nbsp&nbsp
+        SKlearn<br>&nbsp&nbsp
+        itertools<br>&nbsp&nbsp
+        Matplotlib<br>&nbsp&nbsp
+        Seaborn<br>&nbsp&nbsp
+        BytesIO<br>&nbsp&nbsp
+        pathlib<br>&nbsp&nbsp
+        Base64<br>&nbsp&nbsp
+          
+
+     
+        
+    </p>
+    <h1> Version 1.0 </h1>
+    <p>
+        &nbsp&nbsp
+        * Only three stocks, Google, Apple, & Coca Cola were used from <a href="https://www.quandl.com">Quandl </a>  API <br>&nbsp&nbsp
+        * Free WIKI data set has been used from Quandl. The contributors has stopped updating this data set at 27-03-2018. <br>&nbsp&nbsp
+        * Bokeh is used for line plots only. <br>&nbsp&nbsp
+        * Other plots were done through matplotlib and seaborn and thus was sent to html as a picture <br>&nbsp&nbsp
+        * Password are protected through simple hashing in the database. <br>&nbsp&nbsp
+        
+        
+    </p>
+
+    <h1> Notes for Future Versions</h1>
+    <p>
+        &nbsp&nbsp
+        * Get more stocks from <a href="https://www.quandl.com">Quandl </a>  API <br>&nbsp&nbsp
+        * Find another free stock prices data to connect to project. Although the project can calculate realtime, the data is old. <br>&nbsp&nbsp
+        * Use bokeh for other plots <br>&nbsp&nbsp
+        * Use password encryption rather than hashing <br>&nbsp&nbsp
+        * Fixing minor bugs for Flask session applications
+        
+        
+    </p>
+{% endblock %}
+
+  </body>
+</html>

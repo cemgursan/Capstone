@@ -1,0 +1,79 @@
+{% extends "template.html" %}
+{% block menu %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<link rel="stylesheet" href="{{ url_for('static',     filename='css/bootstrap.css') }}"> 
+<head>
+    <head>
+
+        <title>Home Page</title>
+                
+    </head>
+<body>
+
+        <h1>About Cem Gursan</h1>
+        <p>  &nbsp&nbspI am an enthuastic, highly motivated individual with a wide range of interests. 
+          I was a teaching assistant at Radboud University helping bachelor students to learn about fundamentals of simulation modeling. <BR>&nbsp
+          I have been trained in business analysis, simulation modeling, strategic decision-making and facilitative organizational interventions. 
+          I am a debugger at heart and a champion of change. I prefer fast-changing and innovation driven environments as they motivate and <BR>&nbsp challenge me.</p><BR>
+
+
+            <p> <b> &nbsp&nbsp Why should you contact me? </b></p>
+
+            <p> &nbsp&nbsp • Extremely motivated individual with training in information systems, simulation modeling and strategic decision-making.</p>
+           <BR>
+            <p> &nbsp&nbsp • Creative problem solver, able to work independently or cooperatively as part of a team to accomplish goals.</p>
+           <BR>
+            <p> &nbsp&nbsp • Effective communicator with demonstrated ability to interact with groups of people from diverse backgrounds.</p>
+           <BR>
+            <p> &nbsp&nbsp • Intellectually and competitively equipped to excel in a fast-paced and challenging environment.</p>
+
+        <HR>
+            <br>
+            <H3>You can find other interesting projects on my <a href="https://github.com/cemgursan">Github</a> account!</H3>
+            <H3> You can contact me through <a href="https://www.linkedin.com/in/cem-gursan-a8330941/">LinkedIn</a> </H3>
+            <br>
+            <h1>About this project </h1>
+            <p>&nbsp&nbspThis capstone project is built by combining various python libraries to create a powerful data science operations on a web application <br><br>
+                <h3>&nbsp&nbspWhat does this project do?</h3><br>
+            </p>
+            <p>&nbsp&nbsp
+                * This project is a simple front-end & back-end web application. <br>&nbsp&nbsp
+                * This web application has a database which holds user information to log-in and sign-up users. <br>&nbsp&nbsp
+                * Users' passwords are protected by simple hashing before being saved to database. <br>&nbsp&nbsp
+                * Home page has information about the project <br>&nbsp&nbsp
+                * About page has more information about me and this project <br>&nbsp&nbsp
+                * Jinja page has simple Python-HTML connections: Javascripts, Loops in HTML, Passing Python Values to HTML <br>&nbsp&nbsp
+                * Users can sign-in if they have created an account <br>&nbsp&nbsp
+                * If not, they can create an  account by using Sign Up <br>&nbsp&nbsp
+                * When signed in, the user can reach to the menu where they can see various data operations for stocks. <br>&nbsp&nbsp
+                * Stock Prices page has moving average analysis byusing Interactive Bokeh Graph <br>&nbsp&nbsp
+                * Plots page uses Seaborn library to compare two-three different stocks by using Pairplot on prices of stocks and Jointplot on return percentages of stocks <br>&nbsp&nbsp
+                * Monte Carlo Page uses Pandas, Matplotlib, & Bokeh libraries to perform Monte Carlo Simulations.  <br>&nbsp&nbsp
+                * Monte Carlo simulations various pathways are shown in a Line plot by using Matplotlib. <br>&nbsp&nbsp
+                * Monte Carlo simulations are also presented in a histogram to show the distribution of stock prices with a chosen confidence interval. <br>&nbsp&nbsp
+                * Machine Learning page uses Scikit library to perform Linear Regression analysis on stock prices to forecast future prices. <br>&nbsp&nbsp
+                * Linear Regression takes ML features from Quandl API and then uses this data to forecast upcoming stock prices
+           
+            </p>
+
+
+
+            
+            
+            
+            
+
+
+            
+            
+
+        <HR>
+            
+        <img style="max-width: 500px;"src="/static/images/flask.jpg"> 
+
+
+
+</BODY>
+{% endblock menu %}
+</HTML>
