@@ -12,6 +12,8 @@
  7) Now you can visit and play around the website with a browser  : 
  8) Type http://127.0.0.1:5000/ to your browser
  9) Play around the site!
+ 10) Watch the Capstone video on this folder to understand what the website does!
+ 
 
  More Information on the project version can be found on the About page of the website.
  
