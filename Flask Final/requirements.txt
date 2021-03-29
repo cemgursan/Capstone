@@ -49,7 +49,7 @@ Pillow==6.2.0
 prompt-toolkit==1.0.15
 pyasn1==0.4.7
 pycparser==2.19
-Pygments==2.2.0
+Pygments==2.7.4
 pylint==2.4.2
 pyOpenSSL==19.0.0
 pyparsing==2.4.2
